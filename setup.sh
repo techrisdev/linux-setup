@@ -50,7 +50,7 @@ $INSTALL_COMMAND exa
 # TODO: Window Manager, Polybar etc.
 
 # Alacritty Terminal
-$INSTALL_COMMAND rust cargo
+$INSTALL_COMMAND cargo
 cargo install alacritty
 
 clear
