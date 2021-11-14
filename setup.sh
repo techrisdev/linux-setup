@@ -3,12 +3,13 @@ PACKAGE_MANAGER=apt
 INSTALL_COMMAND="sudo $PACKAGE_MANAGER install"
 
 echo "Assuming your Package Manager is $PACKAGE_MANAGER"
-echo "Assuming you're a normal user and sudo is installed and configured"
+echo "Assuming you're a normal user and sudo is installed and configured (THE USER SHOULD BE IN THE SUDO GROUP OR ALTERNATIVELY IN THE WHEEL GROUP!)"
 
 echo "-- UPGRADING THE SYSTEM --"
 sudo apt update && sudo apt upgrade
 
 echo "-- DOTFILES --"
+echo "Just to be sure, we'll try to install git. It is probably already installed for cloning this repository."
 $INSTALL_COMMAND git
 $INSTALL_COMMAND stow
 git clone --depth=1 https://github.com/techrisdev/dotfiles.git ~/.dotfiles
