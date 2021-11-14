@@ -1,6 +1,6 @@
 #!/bin/sh
 PACKAGE_MANAGER=apt
-INSTALL_COMMAND="sudo $PACKAGE_MANAGER install"
+INSTALL_COMMAND="sudo $PACKAGE_MANAGER install -y"
 
 echo "Assuming your Package Manager is $PACKAGE_MANAGER"
 echo "Assuming you're a normal user and sudo is installed and configured (THE USER SHOULD BE IN THE SUDO GROUP OR ALTERNATIVELY IN THE WHEEL GROUP!)"
