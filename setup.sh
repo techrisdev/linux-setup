@@ -33,7 +33,7 @@ $INSTALL_COMMAND tmux
 $INSTALL_COMMAND wget
 $INSTALL_COMMAND unzip
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
-unzip JetBrainsMono.zip
+unzip JetBrainsMono.zip -d JetBrainsMono
 mkdir -p ~/.local/share/fonts
 cp JetBrainsMono/*.otf ~/.local/share/fonts
 
