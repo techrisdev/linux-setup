@@ -27,6 +27,8 @@ $INSTALL_COMMAND zsh
 $INSTALL_COMMAND zsh-autosuggestions
 $INSTALL_COMMAND zsh-syntax-highlighting
 
+$INSTALL_COMMAND tmux
+
 # JetBrains Mono Nerd Font
 $INSTALL_COMMAND wget
 $INSTALL_COMMAND unzip
