@@ -34,10 +34,13 @@ $INSTALL_COMMAND tmux
 # JetBrains Mono Nerd Font
 $INSTALL_COMMAND wget
 $INSTALL_COMMAND unzip
+if [ "$(find . -name "JetBrains Mono Regular Nerd Font Complete.ttf" | wc -l)" = "       0" ]; then
+echo "-- INSTALLING THE JetBrains Mono FONT --"
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip -d JetBrainsMono
 mkdir -p ~/.local/share/fonts
 mv JetBrainsMono/*.ttf ~/.local/share/fonts
+fi
 
 # Starship as a shell prompt
 $INSTALL_COMMAND curl
