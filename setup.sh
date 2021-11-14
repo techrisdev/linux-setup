@@ -29,12 +29,14 @@ $INSTALL_COMMAND zsh-syntax-highlighting
 
 # JetBrains Mono Nerd Font
 $INSTALL_COMMAND wget
+$INSTALL_COMMAND unzip
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip
 mkdir -p ~/.local/share/fonts
 cp JetBrainsMono/*.otf ~/.local/share/fonts
 
 # Starship as a shell prompt
+$INSTALL_COMMAND curl
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 $INSTALL_COMMAND exa
