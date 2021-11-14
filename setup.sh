@@ -24,7 +24,6 @@ $INSTALL_COMMAND neovim
 $INSTALL_COMMAND xorg
 # zsh as a shell
 $INSTALL_COMMAND zsh
-$INSTALL_COMMAND zsh-autocompletion
 $INSTALL_COMMAND zsh-autosuggestions
 $INSTALL_COMMAND zsh-syntax-highlighting
 # Starship as a shell prompt
