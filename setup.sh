@@ -37,6 +37,8 @@ cp JetBrainsMono/*.otf ~/.local/share/fonts
 
 # Starship as a shell prompt
 $INSTALL_COMMAND curl
+clear
+echo "-- STARSHIP PROMPT: PLEASE ANSWER 'y' TO THE NEXT PROMPT"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 $INSTALL_COMMAND exa
@@ -47,3 +49,6 @@ echo "-- ZSH --"
 # Set the default shell to zsh
 echo "Changing the default shell. Your password will be required."
 chsh -s /usr/bin/zsh
+
+echo "-- CLEANING UP --"
+rm -rf JetBrainsMono*
