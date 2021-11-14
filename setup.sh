@@ -1,13 +1,14 @@
 #!/bin/sh
 PACKAGE_MANAGER=apt
 INSTALL_COMMAND="sudo $PACKAGE_MANAGER install -y"
-
+clear
 echo "Assuming your Package Manager is $PACKAGE_MANAGER"
 echo "Assuming you're a normal user and sudo is installed and configured (THE USER SHOULD BE IN THE SUDO GROUP OR ALTERNATIVELY IN THE WHEEL GROUP!)"
 
 echo "-- UPGRADING THE SYSTEM --"
 sudo apt update && sudo apt upgrade
 
+clear
 echo "-- DOTFILES --"
 echo "Just to be sure, we'll try to install git. It is probably already installed for cloning this repository."
 $INSTALL_COMMAND git
@@ -17,6 +18,7 @@ cd ~/.dotfiles
 ./Create_Symlinks_Linux.sh
 cd ~
 
+clear
 echo "-- INSTALLING PACKAGES --"
 # neovim as a editor
 $INSTALL_COMMAND neovim
@@ -46,11 +48,15 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 $INSTALL_COMMAND exa
 
 # TODO: Window Manager, Polybar etc.
+# Alacritty Terminal
+$INSTALL_COMMAND rust cargo
+cargo install alacritty
 
+clear
 echo "-- ZSH --"
 # Set the default shell to zsh
 echo "Changing the default shell. Your password will be required."
 chsh -s /usr/bin/zsh
 
 echo "-- CLEANING UP --"
-rm -rf JetBrainsMono*
+rm -rf ~/JetBrainsMono*
