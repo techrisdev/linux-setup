@@ -37,7 +37,7 @@ $INSTALL_COMMAND unzip
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip -d JetBrainsMono
 mkdir -p ~/.local/share/fonts
-cp JetBrainsMono/*.otf ~/.local/share/fonts
+mv JetBrainsMono/*.ttf ~/.local/share/fonts
 
 # Starship as a shell prompt
 $INSTALL_COMMAND curl
@@ -48,6 +48,7 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 $INSTALL_COMMAND exa
 
 # TODO: Window Manager, Polybar etc.
+
 # Alacritty Terminal
 $INSTALL_COMMAND rust cargo
 cargo install alacritty
