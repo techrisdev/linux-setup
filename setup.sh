@@ -25,6 +25,9 @@ $INSTALL_COMMAND neovim
 # Xorg as Display Server
 $INSTALL_COMMAND xorg
 # zsh as a shell
+
+$INSTALL_COMMAND htop
+
 $INSTALL_COMMAND zsh
 $INSTALL_COMMAND zsh-autosuggestions
 $INSTALL_COMMAND zsh-syntax-highlighting
@@ -34,7 +37,7 @@ $INSTALL_COMMAND tmux
 # JetBrains Mono Nerd Font
 $INSTALL_COMMAND wget
 $INSTALL_COMMAND unzip
-if [ "$(find . -name "JetBrains Mono Regular Nerd Font Complete.ttf" | wc -l)" = "       0" ]; then
+if [ "$(find . -name "JetBrains Mono Regular Nerd Font Complete.ttf" | wc -l)" = "0" ]; then
 echo "-- INSTALLING THE JetBrains Mono FONT --"
 wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip -d JetBrainsMono
@@ -53,7 +56,8 @@ $INSTALL_COMMAND exa
 # TODO: Window Manager, Polybar etc.
 
 # Alacritty Terminal
-# Rustup
+clear
+echo "-- RUSTUP: PLEASE ANSWER '1' TO THE NEXT PROMPT --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 $INSTALL_COMMAND cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 cargo install alacritty
