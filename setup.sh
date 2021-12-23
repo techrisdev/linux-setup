@@ -24,13 +24,16 @@ echo "-- INSTALLING PACKAGES --"
 $INSTALL_COMMAND neovim
 # Xorg as Display Server
 $INSTALL_COMMAND xorg
-# zsh as a shell
 
 $INSTALL_COMMAND htop
 
+# zsh as a POSIX shell
 $INSTALL_COMMAND zsh
 $INSTALL_COMMAND zsh-autosuggestions
 $INSTALL_COMMAND zsh-syntax-highlighting
+
+# fish as default shell
+$INSTALL_COMMAND fish
 
 $INSTALL_COMMAND tmux
 
@@ -63,10 +66,10 @@ $INSTALL_COMMAND cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfi
 cargo install alacritty
 
 clear
-echo "-- ZSH --"
-# Set the default shell to zsh
+echo "-- SHELL --"
+# Set the default shell to fish
 echo "Changing the default shell. Your password will be required."
-chsh -s /usr/bin/zsh
+chsh -s /usr/bin/fish
 
 echo "-- CLEANING UP --"
 rm -rf ~/JetBrainsMono*
